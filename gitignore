@@ -1,0 +1,24 @@
+
+### .gitignore
+
+```gitignore
+# Arquivos do banco de dados
+*.sql
+
+# Arquivos de log
+*.log
+
+# Configurações locais do ambiente
+.env
+
+# Dados sensíveis
+*.key
+*.pem
+
+# Arquivos de backup
+*.bak
+*.old
+
+# Arquivos temporários
+*.tmp
+*.temp
