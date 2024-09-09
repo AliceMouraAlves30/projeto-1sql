@@ -1,0 +1,48 @@
+# Sistema de Gerenciamento de Biblioteca
+
+Este projeto é um sistema simples de gerenciamento de biblioteca usando SQL. Ele permite gerenciar informações sobre autores, livros e empréstimos, realizando operações como inserção, consulta, atualização e exclusão de dados.
+
+## Estrutura do Projeto
+
+1. **Autores**: Armazena os dados dos autores, incluindo nome e nacionalidade.
+2. **Livros**: Armazena os dados dos livros, com informações sobre o título, autor, ano de publicação e gênero.
+3. **Empréstimos**: Registra os empréstimos de livros, com data de empréstimo, devolução e nome do usuário.
+
+## Funcionalidades
+
+- **CRUD de Autores**: Inserção, consulta, atualização e exclusão de autores.
+- **CRUD de Livros**: Inserção, consulta, atualização e exclusão de livros.
+- **Registro de Empréstimos**: Cadastro de novos empréstimos e atualização de devoluções.
+- **Consultas avançadas**:
+  - Listar todos os livros com seus autores.
+  - Listar empréstimos em aberto (sem data de devolução).
+  
+## Como Usar
+
+1. **Criar o banco de dados**:
+   Execute o script SQL fornecido para criar o banco de dados `Biblioteca`, tabelas e inserir dados iniciais.
+
+2. **Inserir e consultar dados**:
+   Use as queries SQL incluídas para inserir mais dados, realizar consultas e operações CRUD.
+
+3. **Atualizar um empréstimo**:
+   Para registrar a devolução de um livro, use a query de atualização para definir a data de devolução.
+
+4. **Excluir registros**:
+   Use as queries de exclusão para remover livros e os empréstimos associados a eles.
+
+## Exemplo de Consulta
+
+Para listar todos os livros e seus autores:
+```sql
+SELECT Livros.Titulo, Autores.Nome AS Autor, Livros.AnoPublicacao
+FROM Livros
+JOIN Autores ON Livros.AutorID = Autores.AutorID;
+Tecnologias Utilizadas
+SQL
+MySQL (ou outro sistema de gerenciamento de banco de dados relacional)
+Requisitos
+MySQL ou outro banco de dados SQL compatível.
+Cliente SQL para execução dos scripts.
+Licença
+Este projeto é livre para uso e modificação.
